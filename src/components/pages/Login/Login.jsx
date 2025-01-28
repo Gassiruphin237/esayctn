@@ -4,11 +4,12 @@ import logo from '../../../assets/logo.png';
 import axios from 'axios';  // Assure-toi d'installer axios avec `npm install axios`
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   // Fonction pour gérer la soumission du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,20 +21,25 @@ const Login = () => {
     }
 
     try {
+      toast.success('Connexion réussie !');
+      setTimeout(() => {
+        navigate('/client');
+      }, 5000);
       // Requête à l'API pour l'authentification de l'utilisateur
-      const response = await axios.post('https://ton-api-url.com/login', {
-        email,
-        password
-      });
+      // const response = await axios.post('https://ton-api-url.com/login', {
+      //   email,
+      //   password
+      // });
 
       // Vérification de la réponse de l'API
-      if (response.data.success) {
-        toast.success('Connexion réussie !');
-        // Gérer la redirection ou les actions après la connexion
-        // Par exemple : rediriger vers le tableau de bord ou la page d'accueil
-      } else {
-        toast.error('Email ou mot de passe incorrect !');
-      }
+      // if (response.data.success) {
+      //   // toast.success('Connexion réussie !');
+      //   // navigate('/client')
+      //   // Gérer la redirection ou les actions après la connexion
+      //   // Par exemple : rediriger vers le tableau de bord ou la page d'accueil
+      // } else {
+      //   toast.error('Email ou mot de passe incorrect !');
+      // }
     } catch (error) {
       // Gérer les erreurs de requête API
       console.error('Erreur lors de la connexion:', error);
