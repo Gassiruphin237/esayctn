@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Importer les pages
 // import Register from './components/pages/Register/Register';
-import Login from './components/Login/Login'; // Exemple de page de login
+import Login from './components/pages/Login/Login'; // Exemple de page de login
 import Register from './components/pages/Register/Register';
+import HomeClient from './components/pages/HomeClient/HomeClient';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Register />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/client" element={<HomeClient />} />
         </Routes>
       </div>
     </Router>

@@ -102,7 +102,7 @@ function Register() {
     return (
         <div className="container">
             <form onSubmit={handleSubmit}>
-                <div className="row">
+                <div className="row" id="row">
                     <div className="text-center">
                         <img src={logo} alt="logo" width={80} />
                         <div className="auth-footer">

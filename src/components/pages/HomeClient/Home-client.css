@@ -1,0 +1,77 @@
+
+.home-client {
+    display: flex;
+    height: 100vh; /* Pour que le contenu prenne toute la hauteur de l'écran */
+  }
+  h2{
+    margin: 20px;
+  }
+  .img{
+    width: 300px;
+  }
+  /* Sidebar */
+  #sidebar {
+    height: 100%; /* La hauteur de la sidebar doit être 100% */
+    background-color: var(--base-clr);
+    transition: 300ms ease-in-out;
+  }
+  
+  /* Contenu principal */
+  .main-content {
+    width: 100%;
+    flex-grow: 1; /* Le contenu prend tout l'espace restant */
+    padding: 20px;
+    background-color: var(--text-clr);
+    color: #000; /* Texte blanc pour contraster avec le fond */
+    overflow-y: auto; /* Pour scroller si nécessaire */
+  }
+  
+  #card{
+    padding: 0;
+    height: 150px;
+    width: 250px;
+    gap: 2px;
+    border: 0;
+  }
+  .down{
+    margin-top: 60px;
+  }
+  .card-link{
+    text-decoration: none;
+    color: #000;
+    font-size: 0.98rem;
+    font-weight: 700;
+  }
+  #row-client{
+   gap: 12px;
+   justify-content: center;
+  }
+  .chart .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50PX;
+    gap: 2px;
+  }
+  .bg-primary{
+    background: linear-gradient(45deg,#EDB561,#8a2be2) !important;
+  }
+  .bg-danger{
+    background: linear-gradient(45deg,#EDB561,#DC3545) !important;
+  }
+  .bg-success{
+    background: linear-gradient(45deg,#EDB561,#198754) !important;
+  }
+  .bg-warning{
+    background: linear-gradient(45deg,#EDB561,#FFC107) !important;
+  }
+  @media (max-width: 800px) {
+    /* .home-client {
+      flex-direction: column;
+    }
+   */
+    /* .main-content {
+      margin-left: 0; 
+    } */
+  }
+  
