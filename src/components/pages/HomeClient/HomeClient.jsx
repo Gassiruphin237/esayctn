@@ -5,7 +5,7 @@ import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import PanToolIcon from '@mui/icons-material/PanTool';
-import { BarChart, PieChart } from '@mui/x-charts';
+import {PieChart } from '@mui/x-charts';
 import image from '../../../assets/4913290.png'
 function HomeClient() {
   const cardsData = [
@@ -47,8 +47,8 @@ function HomeClient() {
                   {
                     data: [
                       { id: 0, value: 10, label: 'Réglées' },
-                      { id: 1, value: 15, label: 'rejetées' },
-                      { id: 2, value: 20, label: 'en attente' },
+                      { id: 1, value: 15, label: 'Rejetées' },
+                      { id: 2, value: 20, label: 'En attente' },
                     ],
                   },
                 ]}
