@@ -15,7 +15,7 @@ function App() {
       <div>
         <Routes>
           {/* Définir les routes pour différentes pages */}
-          <Route path="/" element={<Register />} />
+          <Route path="/" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/client" element={<HomeClient />} />
