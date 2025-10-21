@@ -7,6 +7,7 @@ import Login from './components/pages/Login/Login'; // Exemple de page de login
 import Register from './components/pages/Register/Register';
 import HomeClient from './components/pages/HomeClient/HomeClient';
 import CreateDemande from './components/pages/Demandes/CreateDemande';
+import Evenement from './components/pages/Evenement/Evenement';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/client" element={<HomeClient />} />
+            <Route path="/evenements" element={<Evenement />} />
           <Route path="/Creer-Demande" element={<CreateDemande />} /> 
         </Routes>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Login.css'; // Assure-toi d'importer le fichier CSS
+import './Login.css'; 
 import logo from '../../../assets/logo.png';
-import axios from 'axios';  // Assure-toi d'installer axios avec `npm install axios`
+// import axios from 'axios'; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
@@ -10,11 +10,9 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  // Fonction pour gérer la soumission du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Vérification si les champs sont remplis
     if (!email || !password) {
       toast.error('Veuillez remplir tous les champs !');
       return;
@@ -51,9 +49,9 @@ const Login = () => {
     <div className="container auth-container">
       <div className="auth-box">
         <div className="text-center">
-          <img src={logo} alt="logo" width={80} />
+          {/* <img src={logo} alt="logo" width={80} /> */}
           <div className="auth-footer">
-            <p><strong>Se Connecter</strong></p>
+            <p id='p'><strong>Se Connecter</strong></p>
           </div>
         </div>
 
@@ -90,12 +88,10 @@ const Login = () => {
 
           <div className="auth-footer">
             <a href="#">Mot de passe oublié ?</a>
-            <p>Vous n'avez pas de compte ? <a href="Register">Inscrivez-vous</a></p>
+            <p>Vous n'avez pas de compte ? <a href="#Register">Inscrivez-vous</a></p>
           </div>
         </form>
       </div>
-
-      {/* ToastContainer pour afficher les notifications */}
       <ToastContainer />
     </div>
   );

@@ -1,7 +1,7 @@
 
 .home-client {
     display: flex;
-    height: 100vh; /* Pour que le contenu prenne toute la hauteur de l'écran */
+    height: 100vh; 
   }
   h2{
     margin: 20px;
@@ -26,21 +26,23 @@
     overflow-y: auto; /* Pour scroller si nécessaire */
   }
   
-  #card{
-    padding: 0;
-    height: 150px;
-    width: 250px;
-    gap: 2px;
-    border: 0;
-  }
+  #card {
+  padding: 0;
+  height: 150px;
+  flex: 1 1 220px; /* largeur minimum 220px mais flexible */
+  min-width: 180px; /* tu peux ajuster */
+  max-width: 300px; /* limite max si tu veux */
+  border: 0;
+}
+
   .down{
     margin-top: 60px;
   }
   .card-link{
     text-decoration: none;
     color: #000;
-    font-size: 0.98rem;
-    font-weight: 700;
+    /* font-size: 0.98rem; */
+    /* font-weight: 700; */
   }
   #row-client{
    gap: 12px;
